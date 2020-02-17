@@ -1,0 +1,41 @@
+#include "stdafx.h"
+#include "iostream"
+
+int main()
+{
+
+	const double TESTCONST = 10.19;
+
+	float fFirstTestVariable = 34.43,
+		fSecondTestVariable;
+
+
+	std::cout << "Const double: " << TESTCONST << "\n\n" << "Float: " << fFirstTestVariable << ", MB: 34.43\n";
+
+	double dThirdVariable;
+
+	fSecondTestVariable = 35678932109.67;
+	dThirdVariable = -64.8732E99;
+
+	std::cout << "\nFSOV\n\n";
+	std::cout << fSecondTestVariable << ", MB: 35678932109.67 (float)" << "\n";
+	std::cout << dThirdVariable << ", MB: -64.8732E99 (double)" << "\n";
+	
+	fSecondTestVariable = -0.0000007654;
+	dThirdVariable = 0.5432E-396;
+
+	std::cout << "\nSSOV\n\n";
+	std::cout << fSecondTestVariable << ", MB: -0.0000007654 (float)" << "\n";
+	std::cout << dThirdVariable << ", MB: 0.5432E-396 (double)" << "\n";
+	
+	fSecondTestVariable = 98.123E-61;
+
+	std::cout << "\nTSOV\n\n";
+	std::cout << fSecondTestVariable << ", MB: 98.123E-61 (float)" << "\n";
+
+	int nStopVar = 0;
+	std::cout << "\n... ";
+	std::cin >> nStopVar;
+
+	return 0;
+}
