@@ -1,0 +1,54 @@
+#include "stdafx.h"
+#include "iostream"
+
+int main()
+{
+
+	int nFirstVar = 23,
+		nSecondVar = 0;
+
+	std::cout << "\n~\n";
+	std::cout << "\nX: " << nFirstVar << "\n";
+	std::cout << "~X = " << ~nFirstVar << "\n";
+
+	nFirstVar = 94,
+    nSecondVar = 127;
+
+	std::cout << "\n&\n";
+	std::cout << "\nX: " << nFirstVar << " Y: " << nSecondVar << "\n";
+	std::cout << "X & Y = " << (nFirstVar & nSecondVar) << "\n";
+
+	nFirstVar = 139,
+    nSecondVar = 70;
+
+	std::cout << "\n|\n";
+	std::cout << "\nX: " << nFirstVar << " Y: " << nSecondVar << "\n";
+	std::cout << "X | Y = " << (nFirstVar | nSecondVar) << "\n";
+
+	nFirstVar = 39,
+    nSecondVar = 83;
+
+	std::cout << "\n^\n";
+	std::cout << "\nX: " << nFirstVar << " Y: " << nSecondVar << "\n";
+	std::cout << "X ^ Y = " << (nFirstVar ^ nSecondVar) << "\n";
+
+	nFirstVar = 912,
+	nSecondVar = 6;
+
+	std::cout << "\n<<\n";
+	std::cout << "\nX: " << nFirstVar << " Y: " << nSecondVar << "\n";
+	std::cout << "X << Y = " << (nFirstVar << nSecondVar) << "\n";
+
+	nFirstVar = 90,
+	nSecondVar = 6;
+
+	std::cout << "\n>>\n";
+	std::cout << "\nX: " << nFirstVar << " Y: " << nSecondVar << "\n";
+	std::cout << "X >> Y = " << (nFirstVar >> nSecondVar) << "\n";
+
+	int nStopVar = 0;
+	std::cout << "\n... ";
+	std::cin >> nStopVar;
+	
+	return 0;
+}
