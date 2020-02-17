@@ -1,0 +1,51 @@
+#include "stdafx.h"
+#include "stdafx.h"
+#include "iostream"
+
+int main()
+{
+
+	int nArrayF[10],
+		nArrayS[10],
+		nArrayT[10],
+	    nBuffer = 0;
+
+	std::cout << "Arrays initialisation...\n";
+
+	for (int j = 0; j < 10; j++) 
+	{
+		nArrayT[j] = 0;
+	}
+
+	for (int i = 0; i < 10; i++)
+	{
+		nArrayF[i] = 120 - i;
+		nArrayS[i] = 110 + i;
+
+		if(nArrayF[i] < 115)
+		{
+			nArrayT[i] += 1;
+	    }
+		if (nArrayS[i] < 115)
+		{
+			nArrayT[i] += 1;
+		}
+
+		std::cout << "ArrayFirst[" << i << "] = " << nArrayF[i] << "\n";
+		std::cout << "ArraySecond[" << i << "] = " << nArrayS[i] << "\n";
+		std::cout << "ArrayThird[" << i << "] = " << nArrayT[i] << "\n\n";
+	}
+
+	for (int l = 0; l < 10; l++)
+	{
+		nBuffer = nBuffer + nArrayT[l] ;
+	}
+
+	std::cout << nBuffer;
+
+	int nStopVar = 0;
+	std::cout << "\n... ";
+	std::cin >> nStopVar;
+
+	return 0;
+}
