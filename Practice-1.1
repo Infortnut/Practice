@@ -1,0 +1,57 @@
+#include "stdafx.h"
+#include "iostream"
+
+
+int main()
+{
+ 
+	const int TESTCONST = 10;
+
+	int nFirstTestVariable = 012,
+		nSecondTestVariable;
+
+	std::cout << "Const int: " << TESTCONST << "\n\n" << "Int: " << nFirstTestVariable << ", MB: 10 (012 = 10)\n";
+
+	short int snThirdVariable;
+	unsigned short int usnFourthVariable;
+	long int lnFifthVariable;
+
+	nSecondTestVariable = 31.55; 
+	snThirdVariable = 32; 
+	usnFourthVariable = -453; 
+	lnFifthVariable = 231456; 
+
+	std::cout << "\nFSOV\n\n";
+	std::cout << nSecondTestVariable << ", MB: 31.55 (int)" << "\n";
+	std::cout << snThirdVariable << ", MB: 32 (short int)" << "\n";
+	std::cout << usnFourthVariable << ", MB: -453 (unsigned short int)" << "\n";
+	std::cout << lnFifthVariable << ", MB: 231456 (long int)" << "\n";
+
+	nSecondTestVariable = -3689;
+	snThirdVariable = -566;
+	usnFourthVariable = 12;
+	lnFifthVariable = 47.9;
+
+	std::cout << "\nSSOV\n\n";
+	std::cout << nSecondTestVariable << ", MB: -3689 (int)" << "\n";
+	std::cout << snThirdVariable << ", MB: -566 (short int)" << "\n";
+	std::cout << usnFourthVariable << ", MB: 12 (unsigned short int)" << "\n";
+	std::cout << lnFifthVariable << ", MB: 47.9 (long int)" << "\n";
+
+	nSecondTestVariable = 99771;
+	snThirdVariable = 0x2f;
+	usnFourthVariable = 135790;
+	lnFifthVariable = 21345678901;
+
+	std::cout << "\nTSOV\n\n";
+	std::cout << nSecondTestVariable << ", MB: 99771 (int)" << "\n";
+	std::cout << snThirdVariable << ", MB: 0x2f (short int) (0x2f = 47)" << "\n";
+	std::cout << usnFourthVariable << ", MB: 135790 (unsigned short int)" << "\n";
+	std::cout << lnFifthVariable << ", MB: 21345678901 (long int)" << "\n";
+
+	int nStopVar = 0;
+	std::cout << "\n... ";
+	std::cin >> nStopVar;
+
+	return 0;
+}
