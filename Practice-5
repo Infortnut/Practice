@@ -1,0 +1,97 @@
+#include "stdafx.h"
+#include "iostream"
+
+int main()
+{
+	enum studentNameEnum { A = 1, B = 2, C = 3 };
+
+	struct testStrustOne {
+		char citizenship = 'U';
+		int course;
+		int hostel;
+	};
+
+	struct testStrustSecond {		
+		studentNameEnum studentName;
+		int course;
+		char sity;
+	};
+
+	double dBuffer = 0;
+    double dBufferSecond = 0;
+
+	testStrustOne strArrayFirst[7];
+	testStrustSecond strArraySecond[7];
+
+	strArrayFirst[0].citizenship = 'U'; //Ukraine
+	strArrayFirst[0].hostel = 1;
+	strArrayFirst[0].course = 1;
+
+	strArrayFirst[1].citizenship = 'O'; //other
+	strArrayFirst[1].hostel = 1;
+	strArrayFirst[1].course = 2;
+
+	strArrayFirst[2].citizenship = 'U';
+	strArrayFirst[2].hostel = 0;
+	strArrayFirst[2].course = 3;
+
+	strArrayFirst[3].citizenship = 'O';
+	strArrayFirst[3].hostel = 1;
+	strArrayFirst[3].course = 4;
+
+	strArrayFirst[4].citizenship = 'U';
+	strArrayFirst[4].hostel = 0;
+	strArrayFirst[4].course = 5;
+
+	strArrayFirst[5].citizenship = 'O';
+	strArrayFirst[5].hostel = 0;
+	strArrayFirst[5].course = 1;
+
+	strArrayFirst[6].citizenship = 'U';
+	strArrayFirst[6].hostel = 1;
+	strArrayFirst[6].course = 1;
+
+	strArraySecond[0].studentName = A;
+	strArraySecond[0].course = 1;
+	strArraySecond[0].sity = 'K'; //kyiv
+
+	strArraySecond[1].studentName = A;
+	strArraySecond[1].course = 1;
+	strArraySecond[1].sity = 'O'; //other
+
+	strArraySecond[2].studentName = A;
+	strArraySecond[2].course = 1;
+	strArraySecond[2].sity = 'O'; 
+
+	strArraySecond[3].studentName = A;
+	strArraySecond[3].course = 1;
+	strArraySecond[3].sity = 'K'; 
+
+	strArraySecond[4].studentName = A;
+	strArraySecond[4].course = 1;
+	strArraySecond[4].sity = 'O'; 
+
+	strArraySecond[5].studentName = A;
+	strArraySecond[5].course = 3;
+	strArraySecond[5].sity = 'K'; 
+
+	strArraySecond[6].studentName = A;
+	strArraySecond[6].course = 4;
+	strArraySecond[6].sity = 'K'; 
+
+	for (int i = 0; i < 7; i++)
+	{
+		if (strArrayFirst[i].citizenship == 'O' && strArrayFirst[i].hostel == 1) { dBuffer = dBuffer + 1; }
+
+		if (strArraySecond[i].sity != 'K' && strArraySecond[i].course == 1) { dBufferSecond = dBufferSecond + 1; }
+
+	}
+
+	std::cout << dBuffer/7*100 << "%\n" << dBufferSecond/7*100 << "%\n";
+
+	int nStopVar = 0;
+	std::cout << "\n... ";
+	std::cin >> nStopVar;
+
+	return 0;
+}
