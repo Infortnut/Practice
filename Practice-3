@@ -1,0 +1,30 @@
+int main()
+{
+	int nVariableA = 15,
+		nVariableB = 15,
+		nVariableC = 18,
+		nVariableD = 12,
+		bVarA = 0,
+		bVarB = 0;
+
+	double dVariableA = 17.4,
+	       dVariableB = 3.0,
+		   dVariableC = 12,
+		   dVariableD = 79;
+
+	bVarA = !((nVariableA != nVariableB) || (!(nVariableC > nVariableD)));
+	bVarB = !((dVariableA != dVariableB) || (!(dVariableC > dVariableD)));
+
+
+	std::cout << "\nA: " << nVariableA << " B: " << nVariableB << " C: " << nVariableC << " D: " << nVariableD << "\n";
+	std::cout << "!((A != B) || (!(C > D))) = " << bVarA << "\n";
+
+	std::cout << "\nA: " << dVariableA << " B: " << dVariableB << " C: " << dVariableC << " D: " << dVariableD << "\n";
+	std::cout << "!((A != B) || (!(C > D))) = " << bVarB << "\n";
+
+	int nStopVar = 0;
+	std::cout << "\n... ";
+	std::cin >> nStopVar;
+
+	return 0;
+}
