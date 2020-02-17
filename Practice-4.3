@@ -1,0 +1,37 @@
+#include "stdafx.h"
+#include "iostream"
+
+int main()
+{
+
+	int nDoubleArrayF[4][4] = { { 17, 22, 33, 41} , { 43, 62, 37, 42 } , { 11, 23, 35, 48 } , { 10, 29, 37, 45 } };
+	double dDoubleArrayS[4][5] = { { 17, 22, 33, 41, 42 } ,{ 43, 62, 37, 42, 34 } ,{ 11, 23, 35, 48, 43 } , { 10, 29, 37, 45, 23 } };
+	int nArrayF[4];
+	double dArrayS[4];
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (nDoubleArrayF[i][i] > 0) 
+		{
+			nArrayF[i] = nDoubleArrayF[i][i];
+		}
+
+		std::cout << "Int array[" << i << "] = " << nArrayF[i]  << "\n";
+		
+		dArrayS[i] = dDoubleArrayS[i][0];
+		
+		if (dArrayS[i] > dDoubleArrayS[i][0]) { dArrayS[i] = dDoubleArrayS[i][0]; }
+		if (dArrayS[i] > dDoubleArrayS[i][1]) { dArrayS[i] = dDoubleArrayS[i][1]; }
+		if (dArrayS[i] > dDoubleArrayS[i][2]) { dArrayS[i] = dDoubleArrayS[i][2]; }
+		if (dArrayS[i] > dDoubleArrayS[i][3]) { dArrayS[i] = dDoubleArrayS[i][3]; }
+		if (dArrayS[i] > dDoubleArrayS[i][4]) { dArrayS[i] = dDoubleArrayS[i][4]; }
+
+		std::cout << "Double array[" << i << "] = " << dArrayS[i] << "\n";
+	}
+
+	int nStopVar = 0;
+	std::cout << "\n... ";
+	std::cin >> nStopVar;
+
+	return 0;
+}
