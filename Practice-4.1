@@ -1,0 +1,51 @@
+#include "stdafx.h"
+#include "iostream"
+
+int main()
+{
+
+	int nArray[10];
+	int nBuffer = 0;
+
+	std::cout << "Array initialisation...\n";
+
+	for (int i = 0; i < 10; i++)
+	{
+		if (i % 2 == 0) 
+		{		
+			nArray[i] = i + 5;
+        }
+		else
+		{
+			nArray[i] = i - 5;
+		}
+		std::cout << "Array[" << i << "] = " << nArray[i] << "\n";
+	}
+
+	std::cout << "Array sorting...\n";
+
+	for (int j = 1; j < 10; j++)
+	{
+		if (nArray[j-1]>nArray[j])
+		{
+			nBuffer = nArray[j];
+			nArray[j] = nArray[j-1];
+			nArray[j-1] = nBuffer;
+			j = 0;
+		}		
+					
+	}
+
+	std::cout << "Array sorted\n";
+
+	for (int l = 0; l < 10; l++)
+	{
+		std::cout << "Array[" << l << "] = " << nArray[l] << "\n";
+	}
+
+	int nStopVar = 0;
+	std::cout << "\n... ";
+	std::cin >> nStopVar;
+
+	return 0;
+}
