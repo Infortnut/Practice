@@ -1,0 +1,51 @@
+#include "stdafx.h"
+#include "iostream"
+#include "Math.h"
+
+
+float testMathFunction(float);
+
+int main()
+{
+	int dVariableX = -20;
+	int dStep = 2;
+
+	float dResult = 0.0;
+
+	while (dVariableX <= 51) //счетчик от dVariableX до 50 с шагом 2
+	{
+		dResult = dResult + testMathFunction(dVariableX);
+
+		dVariableX = dVariableX + dStep;
+	}
+
+	dResult = (int)(dResult * 10);
+	std::cout << dResult/10;
+
+	int nStopVar = 0;
+	std::cout << "\n... ";
+	std::cin >> nStopVar;
+
+	return 0;
+}
+
+float testMathFunction(float X) 
+{    
+	float fY = 0.0;
+	float fX = X / 10;
+
+	if (fX >= 1.0) 
+	{
+		fY = ((fX*fX) + (5.0 * fX) + (4.0));
+	}
+	else 
+	{
+		float i = 1;
+		while (i < 7) //шесть повторений
+		{
+			fY = (fY + ((fX + i) / (fX - i)));
+			i +=1;
+		}
+	}
+	return fY;
+}
