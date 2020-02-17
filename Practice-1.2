@@ -1,0 +1,124 @@
+#include "stdafx.h"
+#include "iostream"
+
+int main()
+{
+    int nFirstVar = 0; // for x64 system int 
+	int nSecondVar = 0;
+	double dThirdVar = 0;
+	double dFourthVar = 0;
+
+	nFirstVar = 21474836470;
+    nSecondVar = 0;
+
+	std::cout << "X, Y are integers ----------------------- \n";
+
+	std::cout << "\nX = " << nFirstVar << " Y = " << nSecondVar << "\n";
+	std::cout << "+X: " << nFirstVar << "\n" ;
+
+	nFirstVar = -73;
+
+	std::cout << "\nX = " << nFirstVar << " Y = " << nSecondVar << "\n";
+	std::cout << "-X: " << -nFirstVar << "\n";
+
+	nFirstVar = 46;
+	nSecondVar = 87;
+
+	std::cout << "\nX = " << nFirstVar << " Y = " << nSecondVar << "\n";
+	std::cout << "X+Y: " << nFirstVar + nSecondVar << "\n";
+
+    nFirstVar = -79;
+	nSecondVar = 12;
+
+	std::cout << "\nX = " << nFirstVar << " Y = " << nSecondVar << "\n";
+	std::cout << "X-Y: " << nFirstVar - nSecondVar << "\n";
+
+	nFirstVar = 13;
+	nSecondVar = 3;
+
+	std::cout << "\nX = " << nFirstVar << " Y = " << nSecondVar << "\n";
+	std::cout << "X*Y: " << nFirstVar * nSecondVar << "\n";
+
+	nFirstVar = 20;
+	nSecondVar = 5;
+
+	std::cout << "\nX = " << nFirstVar << " Y = " << nSecondVar << "\n";
+	std::cout << "X/Y (Ints): " << ((int)(nFirstVar / nSecondVar)) << "\n";
+
+	nFirstVar = 20;
+	nSecondVar = 6;
+
+	std::cout << "\nX = " << nFirstVar << " Y = " << nSecondVar << "\n";
+	std::cout << "X/Y (Ints): " << ((int)(nFirstVar / nSecondVar)) << "\n";
+
+	nFirstVar = 32;
+	nSecondVar = 6;
+
+	std::cout << "\nX = " << nFirstVar << " Y = " << nSecondVar << "\n";
+	std::cout << "X%Y: " << nFirstVar % nSecondVar << "\n";
+
+	nFirstVar = 18;
+	nSecondVar = 4;
+
+	std::cout << "\nX = " << nFirstVar << " Y = " << nSecondVar << "\n";
+	std::cout << "X/Y: " << nFirstVar / nSecondVar << "\n";
+
+	//doubles
+
+	std::cout << "\nX, Y are doubles ----------------------- \n";
+
+	dThirdVar = 34.3;
+	dFourthVar = 0;
+
+	std::cout << "\nX = " << dThirdVar << " Y = " << dFourthVar << "\n";
+	std::cout << "+X: " << dThirdVar << "\n";
+
+	dThirdVar = 43.2;
+
+	std::cout << "\nX = " << dThirdVar << " Y = " << dFourthVar << "\n";
+	std::cout << "-X: " << -dThirdVar << "\n";
+
+	dThirdVar = 32.3;
+	dFourthVar = 65.1;
+
+	std::cout << "\nX = " << dThirdVar << " Y = " << dFourthVar << "\n";
+	std::cout << "X+Y: " << dThirdVar + dFourthVar << "\n";
+
+	dThirdVar = 16.1;
+	dFourthVar = 2.1;
+
+	std::cout << "\nX = " << dThirdVar << " Y = " << dFourthVar << "\n";
+	std::cout << "X-Y: " << dThirdVar - dFourthVar << "\n";
+
+	dThirdVar = 11.4;
+	dFourthVar = 2.5;
+
+	std::cout << "\nX = " << dThirdVar << " Y = " << dFourthVar << "\n";
+	std::cout << "X*Y: " << dThirdVar * dFourthVar << "\n";
+
+	dThirdVar = 20.1;
+	dFourthVar = 5.05;
+
+	std::cout << "\nX = " << dThirdVar << " Y = " << dFourthVar << "\n";
+	std::cout << "X/Y (Ints): " << ((int)(dThirdVar / dFourthVar)) << "\n";
+
+	dThirdVar = 32.6;
+	dFourthVar = 6.1;
+
+	std::cout << "\nX = " << dThirdVar << " Y = " << dFourthVar << "\n";
+	std::cout << "X%Y: " << "err" << "\n";
+
+	dThirdVar = 19.1;
+	dFourthVar = 3.1;
+
+	std::cout << "\nX = " << dThirdVar << " Y = " << dFourthVar << "\n";
+	std::cout << "X/Y: " << dThirdVar / dFourthVar << "\n";
+
+	//stop
+
+	int nStopVar = 0;
+	std::cout << "\n... ";
+	std::cin >> nStopVar;
+
+	return 0;
+}
